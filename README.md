@@ -1,11 +1,11 @@
 ```
-                    ┌──────────────────────────────────────┐
-                    │                                      │
-                    │   MALTE'S MODPACKS                   │
-                    │   ─────────────────────────────      │
-                    │   Personal Minecraft modpack archive │
-                    │                                      │
-                    └──────────────────────────────────────┘
+                    ┌────────────────────────────────────┐
+                    │                                    │
+                    │   MALTE'S MODPACKS                 │
+                    │   ──────────────────────────────   │
+                    │   Personal Minecraft modpack archive│
+                    │                                    │
+                    └────────────────────────────────────┘
 ```
 
 ## Quickstart
@@ -14,39 +14,30 @@
 git clone https://github.com/Malte-Dzierzon/modpacks.git
 ```
 
-Grab the pack you want and import it — `.mrpack` files belong to the Modrinth App, Prism Launcher, ATLauncher, or any launcher that speaks Modrinth; `.zip` packs go into the CurseForge launcher (Prism imports those too). Each platform folder in this repo says which launcher it's for, so you never have to guess.
+Clone the repo and import the pack you want into your launcher — `.mrpack` files work with the Modrinth App, Prism, ATLauncher, or any Modrinth‑compatible client; `.zip` packs go to the CurseForge launcher (Prism imports those too). The top‑level folders represent the platform; inside each you’ll find `client/` and `server/` sub‑folders when applicable. New platforms are added the same way.
+
+## Was ist das?
+
+Dieses Repository fasst die Modpack-Archive zusammen, die ich selbst zusammenstelle, teste und nutze. Sie sind nach Anbieter/Format sortiert und (falls relevant) danach, ob sie client‑ oder server‑seitig sind. Git LFS hält die großen Dateien außerhalb des normalen Git‑Objektverbunds, damit sich der Repository‑Umfang hält.
 
 ## Modpacks
 
-| Pack | Version | Loader | Minecraft | File |
-| :--- | :------ | :----- | :-------- | :--- |
+| Pack | Version | Loader | Minecraft | Datei |
+| :--- | :------ | :----- | :-------- | ----- |
 | **NeoforgeRPG** | 1.0.0 | NeoForge | 1.21.1 | `modrinth/NeoforgeRPG.mrpack` |
 | **Paleon** | 1.0.0 | Fabric | 1.21.11 | `modrinth/Paleon 1.0.0.mrpack` |
 
-More packs will keep landing here as I make, test, and play them. If one of my packs goes through a rewrite, I keep the old version around until the new one has proven itself.
+Weitere Packs landen hier, sobald ich sie mache, teste oder spiele. Wenn ein Pack überarbeitet wird, behalte ich die alte Version erst einmal bei.
 
-## Layout
+## Ordnerstruktur
 
-```
-modpacks/
-├── modrinth/                 # .mrpack — Modrinth App, Prism, ATLauncher
-│   ├── client/               #   client-only packs
-│   ├── server/               #   server-only packs
-│   ├── NeoforgeRPG.mrpack
-│   └── Paleon 1.0.0.mrpack
-├── curseforge/               # .zip — CurseForge App
-│   ├── client/
-│   └── server/
-└── README.md
-```
+Derzeit sind die Packs nach Plattform (`modrinth/`, `curseforge/`, …) sortiert und innerhalb jeder Plattform optional nach `client/` und `server/`. Packs, die beide Seiten abdecken, landen direkt im Plattform‑Ordner. **Dieses Schema lässt sich jederzeit beliebig erweitern** – etwa um `ftb/`, `technic/` oder eigene Quellen. Jeder neue Ordner folgt derselben Konvention.
 
-A pack that works on both sides (most do) sits directly in the platform folder. Only packs that are deliberately client-only or server-only go one level down. Other sources get their own folder when the need comes up.
+## Warum dieses Repository?
 
-## Why this exists
+Ich spielte früher auf verschiedenen Maschinen und hatte jedes Mal die Pack‑Dateien neu besorgen müssen. Deshalb leben sie nun hier: clone, pack nehmen, weiterspielen.
 
-I export packs, I play them on different machines, and I got tired of re-uploading the files. So they live here instead. Clone anywhere, take what you need, keep playing.
-
-The large files are handled by Git LFS, so the repository itself stays lean.
+Die großen Dateien werden von Git LFS verwaltet, damit sich der Repository‑Umfang im Rahmen hält.
 
 ```
                 ▄ ▄ ▄
